@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Nice links you have there</h1>
+<p>What color are they?</p>
+<a id = "link1" href="http://facebook.com">http://facebook.com</a><br />
+<a id="link2" href="http://google.com">http://google.com/</a><br />
+<a id="link3" href="http://stackoverflow.com/">http://stackoverflow.com/</a><br />
+
+
+<script>
+    var element = document.getElementById("link1");
+
+    style = window.getComputedStyle(element), // the CSSStyleDeclaration { }. Style object
+    color = style.getPropertyValue('color'); // the color. rgb(0,0,238) is unvisited
+   
+
+
+    var element2 = document.getElementById("link2");
+    style2 = window.getComputedStyle(element), // the CSSStyleDeclaration { }. Style object
+    color2 = style.getPropertyValue('color'); // the color. rgb(0,0,238) is unvisited
+	
+    var element3 = document.getElementById("link3");
+    style3 = window.getComputedStyle(element), // the CSSStyleDeclaration { }. Style object
+    color3 = style.getPropertyValue('color'); // the color. rgb(0,0,238) is unvisited
+    
+    if(color!="rgb(0, 0, 238)"){
+    	alert("You visited facebook.com");
+    }
+    if(color2!="rgb(0, 0, 238)"){
+    	alert("You visited google.com");
+    }
+    if(color3!="rgb(0, 0, 238)"){
+    	alert("You visited stackoverflow.com");
+    }
+
+</script>
+
+
+</body>
+</html>
